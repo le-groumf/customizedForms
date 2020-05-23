@@ -1,10 +1,6 @@
+ ${AnsiColor.RED} ___ ${AnsiColor.GREEN}___ ___ ${AnsiColor.RED} ___ ${AnsiColor.GREEN} ___  ___ __  __ ___
+ ${AnsiColor.RED}| _ \${AnsiColor.GREEN} __| _ \${AnsiColor.RED}| __|${AnsiColor.GREEN}/ _ \| _ \  \/  / __|
+ ${AnsiColor.RED}|  _/${AnsiColor.GREEN} _||   /${AnsiColor.RED}| _|${AnsiColor.GREEN}| (_) |   / |\/| \__ \
+ ${AnsiColor.RED}|_| ${AnsiColor.GREEN}|___|_|_\${AnsiColor.RED}|_|  ${AnsiColor.GREEN}\___/|_|_\_|  |_|___/
 
-  ${AnsiColor.GREEN}      ██╗${AnsiColor.RED} ██╗   ██╗ ████████╗ ███████╗   ██████╗ ████████╗ ████████╗ ███████╗
-  ${AnsiColor.GREEN}      ██║${AnsiColor.RED} ██║   ██║ ╚══██╔══╝ ██╔═══██╗ ██╔════╝ ╚══██╔══╝ ██╔═════╝ ██╔═══██╗
-  ${AnsiColor.GREEN}      ██║${AnsiColor.RED} ████████║    ██║    ███████╔╝ ╚█████╗     ██║    ██████╗   ███████╔╝
-  ${AnsiColor.GREEN}██╗   ██║${AnsiColor.RED} ██╔═══██║    ██║    ██╔════╝   ╚═══██╗    ██║    ██╔═══╝   ██╔══██║
-  ${AnsiColor.GREEN}╚██████╔╝${AnsiColor.RED} ██║   ██║ ████████╗ ██║       ██████╔╝    ██║    ████████╗ ██║  ╚██╗
-  ${AnsiColor.GREEN} ╚═════╝ ${AnsiColor.RED} ╚═╝   ╚═╝ ╚═══════╝ ╚═╝       ╚═════╝     ╚═╝    ╚═══════╝ ╚═╝   ╚═╝
-
-${AnsiColor.BRIGHT_BLUE}:: JHipster 🤓  :: Running Spring Boot ${spring-boot.version} ::
-:: https://www.jhipster.tech ::${AnsiColor.DEFAULT}
+ ${AnsiColor.BRIGHT_BLUE}Running | Spring Boot ${spring-boot.version} | Angular Core 9.1.3

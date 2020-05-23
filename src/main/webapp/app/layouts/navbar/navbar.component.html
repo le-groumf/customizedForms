@@ -11,7 +11,7 @@
             <li class="nav-item" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
                 <a class="nav-link" routerLink="/" (click)="collapseNavbar()">
                     <span>
-                        <fa-icon icon="home"></fa-icon>
+                        <fa-icon icon="caravan"></fa-icon>
                         <span jhiTranslate="global.menu.home">Home</span>
                     </span>
                 </a>
@@ -98,7 +98,8 @@
                 </a>
                 <ul class="dropdown-menu" ngbDropdownMenu aria-labelledby="languagesnavBarDropdown">
                     <li *ngFor="let language of languages">
-                        <a class="dropdown-item" [jhiActiveMenu]="language" href="javascript:void(0);" (click)="changeLanguage(language);collapseNavbar();">{{ language | findLanguageFromKey }}</a>
+                        <a class="dropdown-item" [jhiActiveMenu]="language" href="javascript:void(0);"
+                           (click)="changeLanguage(language);collapseNavbar();">{{ language | findLanguageFromKey }}</a>
                     </li>
                 </ul>
             </li>
@@ -133,13 +134,13 @@
                             <span jhiTranslate="global.menu.account.logout">Sign out</span>
                         </a>
                     </li>
-                    <li *ngSwitchCase="false">
+                    <li *ngSwitchCase="true">
                         <a class="dropdown-item" (click)="login()" id="login">
                             <fa-icon icon="sign-in-alt" [fixedWidth]="true"></fa-icon>
                             <span jhiTranslate="global.menu.account.login">Sign in</span>
                         </a>
                     </li>
-                    <li *ngSwitchCase="false">
+                    <li *ngSwitchCase="true">
                         <a class="dropdown-item" routerLink="account/register" routerLinkActive="active" (click)="collapseNavbar()">
                             <fa-icon icon="user-plus" [fixedWidth]="true"></fa-icon>
                             <span jhiTranslate="global.menu.account.register">Register</span>
@@ -150,3 +151,30 @@
         </ul>
     </div>
 </nav>
+
+<mat-toolbar color="primary">
+    <button mat-button [matMenuTriggerFor]="aboveMenu">Above</button>
+    <mat-menu #aboveMenu="matMenu" yPosition="above">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+    </mat-menu>
+
+<!--&lt;!&ndash;    <button mat-button [matMenuTriggerFor]="belowMenu">Below</button>&ndash;&gt;-->
+<!--    <mat-menu #belowMenu="matMenu" yPosition="below">-->
+<!--        <button mat-menu-item>Item 1</button>-->
+<!--        <button mat-menu-item>Item 2</button>-->
+<!--    </mat-menu>-->
+
+<!--    <button mat-button [matMenuTriggerFor]="beforeMenu">Before</button>-->
+<!--    <mat-menu #beforeMenu="matMenu" xPosition="before">-->
+<!--        <button mat-menu-item>Item 1</button>-->
+<!--        <button mat-menu-item>Item 2</button>-->
+<!--    </mat-menu>-->
+
+
+<!--    <button mat-button [matMenuTriggerFor]="afterMenu">After</button>-->
+<!--    <mat-menu #afterMenu="matMenu" xPosition="after">-->
+<!--        <button mat-menu-item>Item 1</button>-->
+<!--        <button mat-menu-item>Item 2</button>-->
+<!--    </mat-menu>-->
+</mat-toolbar>

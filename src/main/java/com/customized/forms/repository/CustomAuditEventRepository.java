@@ -5,6 +5,8 @@ import com.customized.forms.config.audit.AuditEventConverter;
 import com.customized.forms.domain.PersistentAuditEvent;
 import java.time.Instant;
 import java.util.*;
+import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.actuate.audit.AuditEvent;
@@ -17,6 +19,7 @@ import org.springframework.transaction.annotation.Transactional;
  * An implementation of Spring Boot's {@link AuditEventRepository}.
  */
 @Repository
+@RequiredArgsConstructor
 public class CustomAuditEventRepository implements AuditEventRepository {
     private static final String AUTHORIZATION_FAILURE = "AUTHORIZATION_FAILURE";
 
@@ -24,20 +27,9 @@ public class CustomAuditEventRepository implements AuditEventRepository {
      * Should be the same as in Liquibase migration.
      */
     protected static final int EVENT_DATA_COLUMN_MAX_LENGTH = 255;
-
     private final PersistenceAuditEventRepository persistenceAuditEventRepository;
-
     private final AuditEventConverter auditEventConverter;
-
     private final Logger log = LoggerFactory.getLogger(getClass());
-
-    public CustomAuditEventRepository(
-        PersistenceAuditEventRepository persistenceAuditEventRepository,
-        AuditEventConverter auditEventConverter
-    ) {
-        this.persistenceAuditEventRepository = persistenceAuditEventRepository;
-        this.auditEventConverter = auditEventConverter;
-    }
 
     @Override
     public List<AuditEvent> find(String principal, Instant after, String type) {

@@ -45,9 +45,10 @@ spring:
       indent-output: true
   datasource:
     type: com.zaxxer.hikari.HikariDataSource
-    url: jdbc:h2:file:./target/h2db/db/customizedforms;DB_CLOSE_DELAY=-1
-    username: customizedForms
-    password:
+    #    url: jdbc:h2:file:./target/h2db/db/customizedforms;DB_CLOSE_DELAY=-1
+    url: jdbc:mysql://localhost:3306/performs
+    username: user
+    password: user
     hikari:
       poolName: Hikari
       auto-commit: false
